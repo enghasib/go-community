@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Array - BGCE ARCHIVE</title>
+        <title>Rock Paper Scissors - BGCE ARCHIVE</title>
 
 
         <!-- Custom HTML head -->
@@ -178,161 +178,130 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>[<strong>Author:</strong> @mdimamhosen, @mahabubulhasibshawon
-<strong>Date:</strong> 2025-04-19
-<strong>Category:</strong> interview-qa/arrays
-<strong>Tags:</strong> [go, arrays, functions]
-]</p>
-<h1 id="go-তে-array"><a class="header" href="#go-তে-array">Go তে Array</a></h1>
-<h2 id="array-declare-করা"><a class="header" href="#array-declare-করা">Array declare করা</a></h2>
-<p>Go-তে নিচের syntax ব্যবহার করে array declare করা যায়:</p>
-<pre><code class="language-go">var arrayName [size]elementType
+                        <h1 id="-rock-paper-scissors-lizard-spock-go-edition"><a class="header" href="#-rock-paper-scissors-lizard-spock-go-edition">✊📄✂️🦎🖖 Rock-Paper-Scissors-Lizard-Spock (Go Edition)</a></h1>
+<blockquote>
+<p>A terminal-based game of <strong>Rock, Paper, Scissors, Lizard, Spock</strong> — written entirely in Go.<br />
+Inspired by <em>The Big Bang Theory</em> and designed to reduce the number of ties from the classic Rock-Paper-Scissors.</p>
+</blockquote>
+<hr />
+<h2 id="-game-modes"><a class="header" href="#-game-modes">🎮 Game Modes</a></h2>
+<p>This version supports:</p>
+<ul>
+<li><strong>Classic Mode</strong>: Rock-Paper-Scissors</li>
+<li><strong>Extended Mode</strong>: Rock-Paper-Scissors-Lizard-Spock</li>
+</ul>
+<p>The computer picks its move randomly, and you battle it out in the terminal.</p>
+<hr />
+<h2 id="-rules"><a class="header" href="#-rules">🧩 Rules</a></h2>
+<blockquote>
+<p><em>As explained by Sheldon Cooper:</em></p>
+</blockquote>
+<ul>
+<li>Scissors cuts Paper</li>
+<li>Paper covers Rock</li>
+<li>Rock crushes Lizard</li>
+<li>Lizard poisons Spock</li>
+<li>Spock smashes Scissors</li>
+<li>Scissors decapitates Lizard</li>
+<li>Lizard eats Paper</li>
+<li>Paper disproves Spock</li>
+<li>Spock vaporizes Rock</li>
+<li>Rock crushes Scissors</li>
+</ul>
+<hr />
+<h2 id="-ascii-art"><a class="header" href="#-ascii-art">📸 ASCII Art</a></h2>
+<p>Each move comes with its own ASCII art for maximum nerd satisfaction:</p>
+<pre><code>Rock:      _______
+        ---'   ____)
+              (_____)
+              (_____)
+              (____)
+        ---.__(___)
+
+Paper:      _______
+        ---'    ____)____
+                   ______)
+                  _______)
+                 _______)
+        ---.__________)
 </code></pre>
-<p>উদাহরণ:</p>
-<pre><code class="language-go">var numbers [5]int
+<p>…and more for <strong>Scissors</strong>, <strong>Lizard</strong>, and <strong>Spock</strong>.</p>
+<hr />
+<h2 id="-how-to-run"><a class="header" href="#-how-to-run">🚀 How to Run</a></h2>
+<ol>
+<li>
+<p><strong>Clone the repo:</strong></p>
+<pre><code class="language-bash">git clone https://github.com/yourusername/rpsls-go.git
+cd rpsls-go
 </code></pre>
-<h2 id="arrays--initialize-করা"><a class="header" href="#arrays--initialize-করা">Arrays  initialize করা</a></h2>
-<p>Array declare করার সময় Array initialize করা যেতে পারে:</p>
-<pre><code class="language-go">var numbers = [5]int{1, 2, 3, 4, 5}
+</li>
+<li>
+<p><strong>Run the game:</strong></p>
+<pre><code class="language-bash">go run main.go
 </code></pre>
-<p>অথবা short-hand notation ব্যবহার করতে পারেন:</p>
-<pre><code class="language-go">numbers := [5]int{1, 2, 3, 4, 5}
+</li>
+</ol>
+<hr />
+<h2 id="-features"><a class="header" href="#-features">🛠 Features</a></h2>
+<ul>
+<li>Fully interactive terminal gameplay</li>
+<li>Input validation (no more typos ruining your match)</li>
+<li>Fun ASCII art for each move</li>
+<li>Randomized computer opponent</li>
+<li>Looping draw condition (keep going until there's a winner)</li>
+</ul>
+<hr />
+<h2 id="-example-gameplay"><a class="header" href="#-example-gameplay">📌 Example Gameplay</a></h2>
+<pre><code>Choose your move:
+Rock
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+
+Paper
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+
+... (more ASCII moves) ...
+
+Welcome to the game of Rock, Paper, Scissors, Lizard, Spock
+Do you want to read the rules? [y/n]: y
+
+Sheldon explains:
+Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, ...
+
+Enter your move (Rock, Paper, Scissors, Lizard, Spock): Spock
+You chose: Spock
+Computer chose: Lizard
+You lost! Hahaha, you suck!
 </code></pre>
-<h2 id="array-element-access-করা"><a class="header" href="#array-element-access-করা">Array element access করা</a></h2>
-<p>Array এর element index ব্যবহার করে access করা যায়, যেটি 0 থেকে শুরু হয়:</p>
-<pre><code class="language-go">fmt.Println(numbers[0]) // Output: 1
-</code></pre>
-<h2 id="array-তে-loop-run-করা"><a class="header" href="#array-তে-loop-run-করা">Array তে loop run করা</a></h2>
-<p><code>for</code> loop ব্যবহার করে Array উপর loop run করা যায়:</p>
-<pre><code class="language-go">for i := 0; i &lt; len(numbers); i++ {
-    fmt.Println(numbers[i])
-}
-</code></pre>
-<p>অথবা <code>range</code> keyword ব্যবহার করতে পারেন:</p>
-<pre><code class="language-go">for index, value := range numbers {
-    fmt.Println(index, value)
-}
-</code></pre>
-<h2 id="multidimensional-arrays"><a class="header" href="#multidimensional-arrays">Multidimensional Arrays</a></h2>
-<p>Go multidimensional array সাপোর্ট করে। একটি two-dimensional array নিচেরভাবে declare করা হয়:</p>
-<pre><code class="language-go">var matrix [3][3]int
-</code></pre>
-<p>উদাহরণ:</p>
-<pre><code class="language-go">matrix := [3][3]int{
-    {1, 2, 3},
-    {4, 5, 6},
-    {7, 8, 9},
-}
-</code></pre>
-<h2 id="array-of-arrays"><a class="header" href="#array-of-arrays">Array of Arrays</a></h2>
-<p>array of arrays হলো এমন একটি data structure, যেখানে একটি array প্রতিটি element আরেকটি array বা slice। এটি সাধারণত variable সাইজের 2D data রাখার জন্য ব্যবহৃত হয়, যেমন প্রতিটি row তে ভিন্ন ভিন্ন element থাকতে পারে।</p>
-<p>উদাহরণ:</p>
-<pre><code class="language-go">arrayOfArrays := [][]int{
-    {1, 2},
-    {3, 4, 5},
-    {6},
-}
-</code></pre>
-<h2 id="ফাংশনে-arrays-পাঠানো"><a class="header" href="#ফাংশনে-arrays-পাঠানো">ফাংশনে Arrays পাঠানো</a></h2>
-<p>Go-তে array ফাংশনে পাঠানো হয় value হিসেবে, অর্থাৎ ফাংশনটি array এর একটি copy পায়:</p>
-<pre><code class="language-go">func printArray(arr [5]int) {
-    for i := 0; i &lt; len(arr); i++ {
-        fmt.Println(arr[i])
-    }
-}
-</code></pre>
-<p>মূল array পরিবর্তন করতে হলে, আপনাকে array এর pointer পাঠাতে হবে:</p>
-<pre><code class="language-go">func modifyArray(arr *[5]int) {
-    arr[0] = 100
-}
-</code></pre>
-<h2 id="frequently-asked-questions"><a class="header" href="#frequently-asked-questions">Frequently Asked Questions</a></h2>
-<h3 id="q1-go-তে-কিভাবে-array-এর-দৈরঘয-নিরধারণ-করব"><a class="header" href="#q1-go-তে-কিভাবে-array-এর-দৈরঘয-নিরধারণ-করব">Q1: Go-তে কিভাবে array এর দৈর্ঘ্য নির্ধারণ করব?</a></h3>
-<p>array এর  দৈর্ঘ্য নির্ধারণ করতে len() built-in function ব্যবহার করুন।</p>
-<p>উদাহরণ:</p>
-<pre><code class="language-go">package main
-
-import "fmt"
-
-func main() {
-    arr := [5]int{1, 2, 3, 4, 5}
-    fmt.Println("Length of the array:", len(arr)) // Output: 5
-}
-</code></pre>
-<h3 id="q2-go-তে-কিভাবে-একটি-array-copy-করব"><a class="header" href="#q2-go-তে-কিভাবে-একটি-array-copy-করব">Q2: Go-তে কিভাবে একটি array copy করব?</a></h3>
-<p>Go-তে array copy করার জন্য আপনি সেটিকে একই type এবং size এর অন্য array তে assign করতে পারেন।</p>
-<p>উদাহরণ:</p>
-<pre><code class="language-go">package main
-
-import "fmt"
-
-func main() {
-    original := [3]int{1, 2, 3}
-    copy := original
-    fmt.Println("Original:", original) // Output: [1 2 3]
-    fmt.Println("Copy:", copy)         // Output: [1 2 3]
-}
-</code></pre>
-<h3 id="q3-কিভাবে-copy-না-করে-function-এ-array-পাঠিয়ে-সেটিকে-পরিবরতন-করা-যায়"><a class="header" href="#q3-কিভাবে-copy-না-করে-function-এ-array-পাঠিয়ে-সেটিকে-পরিবরতন-করা-যায়">Q3: কিভাবে copy না করে function এ array পাঠিয়ে সেটিকে পরিবর্তন করা যায়?</a></h3>
-<p>copy না করে পরিবর্তন করতে চাইলে array এর pointer পাঠান।</p>
-<p>উদাহরণ:</p>
-<pre><code class="language-go">package main
-
-import "fmt"
-
-func modifyArray(arr *[3]int) {
-    arr[0] = 42
-}
-
-func main() {
-    arr := [3]int{1, 2, 3}
-    modifyArray(&amp;arr)
-    fmt.Println("Modified array:", arr) // Output: [42 2 3]
-}
-</code></pre>
-<h3 id="test-করার-জনয-উদাহরণ-maingo"><a class="header" href="#test-করার-জনয-উদাহরণ-maingo">test করার জন্য উদাহরণ: main.go</a></h3>
-<pre><code class="language-go">package main
-
-import "fmt"
-
-func main() {
-	arr1 := [5]int{1, 2, 3, 4, 5}
-	arr2 := [5]int{1, 2, 3, 4, 5}
-
-	fmt.Println(arr1)
-	fmt.Println(arr2)
-
-	var arr3 [5]int
-	// fmt.Println(arr3) // this should print [0 0 0 0 0]
-	// println("Length:", len(arr3))
-
-	for i := 0; i &lt; len(arr3); i++ {
-	    fmt.Scan(&amp;arr3[i])
-	}
-	fmt.Println(arr3)
-
-	strArr := [3]string{"one", "two", "three"}
-
-	for i := 0; i &lt; len(strArr); i++ {
-		fmt.Print(strArr[i]+ "")
-	}
-
-
-}
-
-
-
-</code></pre>
+<hr />
+<h2 id="-license"><a class="header" href="#-license">📜 License</a></h2>
+<p>MIT License — feel free to fork, modify, and enjoy.</p>
+<hr />
+<h2 id="-credits"><a class="header" href="#-credits">💡 Credits</a></h2>
+<ul>
+<li>Inspired by <em>The Big Bang Theory</em></li>
+<li>ASCII Art adapted from various open-source snippets</li>
+</ul>
+<hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../interview-qna/topic-wise/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../mini-projects/program-counter/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../interview-qna/topic-wise/boolean.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../mini-projects/test-server/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -342,11 +311,11 @@ func main() {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../interview-qna/topic-wise/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../mini-projects/program-counter/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../interview-qna/topic-wise/boolean.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../mini-projects/test-server/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
